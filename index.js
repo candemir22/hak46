@@ -13,7 +13,7 @@ async function initMap() {
     const { Map } = (await google.maps.importLibrary('maps'));
     const { AdvancedMarkerElement } = (await google.maps.importLibrary('marker'));
     let markers = [];
- const  gmp-advanced-marker = position="43,43";
+
     
 
     
@@ -39,13 +39,14 @@ async function initMap() {
     ];
     locations.forEach(([lng, lat]) => {
         // [START maps_advanced_markers_collision_create_marker]
-        const advancedMarker = new AdvancedMarkerElement({
+     
+        const gmp-advanced-marker = new AdvancedMarkerElement({
             position: new google.maps.LatLng({ lat, lng }),
             collisionBehavior: collisionBehavior,
         });
-        mapElement.appendChild(advancedMarker);
+        mapElement.appendChild(gmp-advancedMarker);
         // [END maps_advanced_markers_collision_create_marker]
-        markers.push(advancedMarker);
+        markers.push(gmp-advancedMarker);
     });
 }
 initMap();
