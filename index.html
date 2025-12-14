@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>tek 11</title>
+    <title>tek 22</title>
 
     <link rel="stylesheet" type="text/css" href="./style.css" />
    <div id"map"> </div>
@@ -14,7 +14,8 @@
 
      
 async function initMap() {
-  const { Map } = await google.maps.importLibrary("maps")(document.getElementById("map");
+  const { Map } = await google.maps.importLibrary("maps"),(document.getElementById("map"),    zoom: 13,
+    center: { lat: 42.325, lng: 42.07 };
   const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
   
 
@@ -35,6 +36,7 @@ initMap();
   
   </body>
 </html>
+
 
 
 
