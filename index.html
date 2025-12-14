@@ -25,18 +25,15 @@ async function initMap() {
   const marker = new AdvancedMarkerElement({
     map: map,
     position: { lat: 42.363, lng: 42.044 },
-    title: "Click me", // This also helps with accessibility
+    title: "neler oldu ", // This also helps with accessibility
     gmpClickable: true, // Ensure the marker is set to clickable
   });
 
-  // Correct way to listen for a click event on the Advanced Marker
+  
   marker.addEventListener("gmp-click", (event) => {
-    console.log("Advanced marker was clicked!");
-    // You can access the marker's position via event.target.position
+alert("Hello! I am an alert box!!");
   });
 
-  // Using 'click' here would not work reliably
-  // marker.addEventListener("click", (event) => { ... }); 
 }
 
 
@@ -49,7 +46,7 @@ initMap();
   <body>
  
         <gmp-map center="42,42" zoom="8" map-id="8b37d7206ccf0121d4414bb0">
-    <gmp-advanced-marker id="myMarker" position="42,42" gmp-clickable  title="Click me"></gmp-advanced-marker>
+    <gmp-advanced-marker id="myMarker" position="42,42"  gmpClickable: true,  title="Click me"></gmp-advanced-marker>
 </gmp-map>
           
 
@@ -60,6 +57,7 @@ initMap();
   
   </body>
 </html>
+
 
 
 
