@@ -14,16 +14,9 @@
 
      
 async function initMap() {
-  const { Map } = await google.maps.importLibrary("maps");
+  const { Map } = await google.maps.importLibrary("maps")(document.getElementById("map");
   const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
   
-
-
- 
-  
-  marker.addEventListener("gmp-click", (event) => {
-alert("Hello! I am an alert box!!");
-  });
 
 }
 
@@ -42,6 +35,7 @@ initMap();
   
   </body>
 </html>
+
 
 
 
