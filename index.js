@@ -13,6 +13,10 @@ async function initMap() {
     const { Map } = (await google.maps.importLibrary('maps'));
     const { AdvancedMarkerElement } = (await google.maps.importLibrary('marker'));
     let markers = [];
+ const  gmp-advanced-marker = position="43,43";
+    
+
+    
     let collisionBehavior = google.maps.CollisionBehavior.REQUIRED;
     // @ts-ignore
     const select = new mdc.select.MDCSelect(document.querySelector('.mdc-select'));
