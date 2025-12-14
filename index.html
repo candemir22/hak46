@@ -13,6 +13,21 @@ async function initMap() {
     const { Map } = (await google.maps.importLibrary('maps'));
      const { AdvancedMarkerElement } = (await google.maps.importLibrary('marker'));
     let markers = []; }
+
+function kazibol() {
+  if (marker.getAnimation() !== null) {
+    marker.setAnimation(null);
+  } else {
+    	window.speechSynthesis.speak(new SpeechSynthesisUtterance('kazı bölgesi '));
+    marker.setAnimation(google.maps.Animation.BOUNCE);  } }
+
+function cikis() {
+     marker.setAnimation(null);
+     	window.speechSynthesis.speak(new SpeechSynthesisUtterance('bu bölgenin proje kodu 128.60')); 	}
+
+     
+
+     
 initMap();
    </script>
   
@@ -20,12 +35,17 @@ initMap();
   <body>
  
         <gmp-map center="42.773,42.01" zoom="8" map-id="8b37d7206ccf0121d4414bb0">
-  <gmp-advanced-marker position="42.4220656,42.0840897" addListener("mouseover", kazibol) title="Mountain View, CA"></gmp-advanced-marker>
-  <gmp-advanced-marker position="42.648994,42.3503845"  addListener("mouseover", kazibol)  title="Seattle, WA"></gmp-advanced-marker>
-</gmp-map>
+  <gmp-advanced-marker position="42.4220656,42.0840897" draggable:true  animation: google.maps.Animation.DROP    addListener("mouseover", kazibol) ></gmp-advanced-marker>
+  <gmp-advanced-marker position="42.648994,42.3503845"  addListener("click", cikis) ></gmp-advanced-marker>
+
+        
+        
+        
+        </gmp-map>
   
   </body>
 </html>
+
 
 
 
