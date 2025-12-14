@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>tek8</title>
+    <title>tek9</title>
 
     <link rel="stylesheet" type="text/css" href="./style.css" />
    
@@ -14,8 +14,13 @@
      
 async function initMap() {
     const { Map } = (await google.maps.importLibrary('maps'));
-   
-  const marker = new AdvancedMarkerElement({
+       const { Map } = (await google.maps.importLibrary('maps'));
+    
+ 
+    let markers = [];
+
+  
+  const { AdvancedMarkerElement } = new AdvancedMarkerElement({
     map: map,
     position: { lat: 42, lng: 42.044 },
     title: "Click me", // This also helps with accessibility
@@ -46,6 +51,7 @@ initMap();
   
   </body>
 </html>
+
 
 
 
