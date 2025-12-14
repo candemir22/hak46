@@ -19,13 +19,7 @@ async function initMap() {
   
 
 
-  const marker = new AdvancedMarkerElement({
-
-    position: { lat: 42.363, lng: 42.044 },
-    title: "neler oldu ", // This also helps with accessibility
-    gmpClickable: true, // Ensure the marker is set to clickable
-  });
-
+ 
   
   marker.addEventListener("gmp-click", (event) => {
 alert("Hello! I am an alert box!!");
@@ -43,11 +37,12 @@ initMap();
   <body>
  
         <gmp-map center="42,42" zoom="8" map-id="map">
-
+  <gmp-advanced-marker position="42.648994,42.3503845"  gmpClickable:true   id:"can" ></gmp-advanced-marker>
 
   
   </body>
 </html>
+
 
 
 
