@@ -8,24 +8,21 @@
     <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
         ({key: "AIzaSyA6myHzS10YXdcazAFalmXvDkrYCp5cLc8", v: "weekly"});</script>
    <script>
+
   const mapElement = document.querySelector('gmp-map');
+
+     
 async function initMap() {
     const { Map } = (await google.maps.importLibrary('maps'));
      const { AdvancedMarkerElement } = (await google.maps.importLibrary('marker'));
     let markers = []; }
 
-function kazibol() {
-  if (marker.getAnimation() !== null) {
-    marker.setAnimation(null);
-  } else {
-    	window.speechSynthesis.speak(new SpeechSynthesisUtterance('kazı bölgesi '));
-    marker.setAnimation(google.maps.Animation.BOUNCE);  } }
+  const markerElement = document.getElementById('myMarker');
+  markerElement.addEventListener('gmp-click', (event) => {
+  alert("Hello! I am an alert box!!");
+  });
 
-function cikis() {
-     marker.setAnimation(null);
-     	window.speechSynthesis.speak(new SpeechSynthesisUtterance('bu bölgenin proje kodu 128.60')); 	}
 
-     
 
      
 initMap();
@@ -34,9 +31,10 @@ initMap();
   </head>
   <body>
  
-        <gmp-map center="42.773,42.01" zoom="8" map-id="8b37d7206ccf0121d4414bb0">
-  <gmp-advanced-marker position="42.4220656,42.0840897" draggable:true  animation: google.maps.Animation.DROP    addListener("mouseover", kazibol) ></gmp-advanced-marker>
-  <gmp-advanced-marker position="42.648994,42.3503845"  addListener("click", cikis) ></gmp-advanced-marker>
+        <gmp-map center="42,42" zoom="8" map-id="8b37d7206ccf0121d4414bb0">
+    <gmp-advanced-marker id="myMarker" position="42,42" gmp-clickable  title="Click me"></gmp-advanced-marker>
+</gmp-map>
+          
 
         
         
@@ -45,6 +43,7 @@ initMap();
   
   </body>
 </html>
+
 
 
 
