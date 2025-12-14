@@ -17,7 +17,12 @@ async function initMap() {
      const { AdvancedMarkerElement } = (await google.maps.importLibrary('marker'));
     let markers = []; }
 
-
+  const marker = new AdvancedMarkerElement({
+    map: map,
+    position: { lat: 42, lng: 42.044 },
+    title: "Click me", // This also helps with accessibility
+    gmpClickable: true, // Ensure the marker is set to clickable
+  });
 
 
 
@@ -40,6 +45,7 @@ initMap();
   
   </body>
 </html>
+
 
 
 
