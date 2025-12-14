@@ -21,6 +21,13 @@ async function initMap() {
     zoom: 13,
     center: { lat: 42.325, lng: 42.07 },
   });
+   marker = new google.maps.Marker({
+    map,
+    draggable: true,
+    animation: google.maps.Animation.DROP,
+    position: { lat: 42.327, lng: 42.067 },
+  });
+
   
 
 }
@@ -34,12 +41,10 @@ initMap();
   </head>
   <body>
  
-        <gmp-map center="42,42" zoom="8" map-id="map">
-  <gmp-advanced-marker position="42.648994,42.3503845"  gmpClickable:true  draggable:true   id:"can" ></gmp-advanced-marker>
 
-  
   </body>
 </html>
+
 
 
 
